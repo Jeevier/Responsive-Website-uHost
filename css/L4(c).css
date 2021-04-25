@@ -1,0 +1,74 @@
+main{
+    padding:1rem;
+    padding-top: 0.5rem;
+}
+
+.signup-title{
+    text-align: center;
+    color: #ff5454;
+    font-size: 2.1rem;
+    margin-bottom: 0;
+}
+.signup-form{
+    padding:1.5rem;
+    font-weight: bolder;
+     display: grid;
+      grid-row-gap: 1rem;
+}
+.signup-form label{
+    cursor: pointer;
+}
+
+.signup-form input,
+.signup-form select{
+    border: 1px solid rgb(182, 180, 180);
+    padding:0.2rem 0.5rem;
+    font: inherit;   
+}
+.signup-form input:not([id*="terms"]):focus,
+.signup-form select:focus{
+    outline: none;
+    background: #d8f3df;
+    border-color:#2ddf5c ;
+}
+
+.signup-form input {
+    width:100%;
+}
+
+.signup-form [id*="terms"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background: white;
+    border: 1px solid #ccc;
+}
+.signup-form [id*="terms"]:checked{
+    background: #2ddf5c;
+    border: #0e4f1f 1px solid;
+}
+
+@media (min-width:40rem){
+    .signup-form{
+
+        margin:auto; 
+        max-width: 600px;
+        grid-template-columns: 10rem auto;
+        grid-row-gap: 2rem;
+    }
+    label[for="title"]{
+        grid-column: span 2;
+    }
+    #title{
+        grid-column: span 2;
+    }
+
+    .signup-form__terms{
+        grid-column: span 2;
+    }
+    .button{
+        grid-column: span 2;
+    }
+}

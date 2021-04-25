@@ -1,0 +1,117 @@
+/* position:absolute and position:fixed is kind of same as both take targeted container out of flow of documentation but difference is that they use position context differently in case of fixed , it is view port but in case of absolute , it depend on nearest ancestor having position property applied(any), if there is no ancestor have position property then it use html tag as its position context */
+main{
+    padding-top: 2rem;
+}
+.background-image{
+    background: url("../photo/background.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(20%);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: -1;
+    
+
+}
+.plans{
+    background: rgb(213, 255, 213 ,0.85);
+    border: #0e4f1f 4px solid;
+    border-left: none;
+    width:70%;
+    margin : 10px 0px 14px 0px;
+    position: relative;
+}
+.plans a{
+    text-decoration: none;
+    display: block;
+    padding: 30px;
+}
+
+.plans:hover,
+.plans:active{
+    box-shadow: 5px 5px 4px rgba(0, 0, 0,0.5);
+    border-color: #ff1b68;
+}
+.plans h1{
+    color: black;
+    font-weight:900;
+}
+.plans h2{
+    color:#6d6d6d;
+    font-weight: bold;
+}
+.plans p{
+    background: white;
+    border: 2px solid #0e4f1f;
+    color:#0e4f1f;
+    padding: 20px;
+    /* font-family: 'Anonymous Pro', monospace;
+    font-weight: 700;
+    font-size:1.2rem ; */
+    /* font:font-style font-variant font-weight font-size/line-height font-family;  */
+    font-size: 1.2rem;
+}
+.plans-highlight{  
+    background-color: rgba(107, 189, 107, 0.85);
+    
+}
+.plans-highlight h1{
+    color:whitesmoke;
+}
+#recommended{
+    background-color: rgba(147, 216, 147, 0.85);
+    overflow: hidden;
+}
+#free{
+    float:right;
+    border-right:none ;
+    border-left:#0e4f1f 4px solid;
+    text-align: right;
+}
+#free:active,
+#free:hover{
+    border-left-color:#ff1b68;
+}
+.clearfix{
+    clear: both;
+}
+
+.plans .badge{
+    color: black;
+    width: 15rem;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 0px;
+    color: white;
+    background: #ff5454;
+    padding: 10px;
+    font-size: small;
+
+    transform-origin: center;
+    transform: rotateZ(45deg) translateX(4.6rem) translateY(-1.5rem);
+}
+
+@media(min-width:40rem){
+    main{
+        max-width:1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media(min-width:1500px){
+    .plans{
+        border-left: #0e4f1f 4px solid;
+    }
+    #free{
+        border-right: #0e4f1f 4px solid;
+    }
+    #free:active,
+    #free:hover{
+        border-right-color:#ff1b68;
+    }
+}
